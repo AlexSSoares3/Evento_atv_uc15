@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formatura TI116 - Vai Dar Praia</title>
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+
+  <header>
+    <h1>Formatura TI116 - Vai Dar Praia</h1>
+    <p>Confirmação de presença para a nossa confraternização de encerramento do Curso Técnico.</p>
+  </header>
+
+  <main>
+
+    <section>
+      <h2>O Evento</h2>
+      <img src="img/formatura.jpg" alt="Alunos formandos do curso técnico em informática com becas e certificados" width="100%">
+      <p>Confraternização de formatura do Curso Técnico em Informática da turma TI116. A turma inteira vai se reunir para comemorar a conclusão do curso técnico em um dia inesquecível na praia!</p>
+    </section>
+
+    <section>
+      <h2>Quando e Onde</h2>
+      
+      <dl>
+        <dt>Data</dt>
+        <dd>
+          <p>Sábado, <time datetime="2026-12-12">12 de dezembro de 2026</time>, das <time datetime="09:00">9h</time> às <time datetime="18:00">18h</time>.</p>
+        </dd>
+
+        <dt>Onde</dt>
+        <dd>Praia Grande / SP — Quiosque 14, Avenida Costa e Silva, Boqueirão</dd>
+
+        <dt>Saída</dt>
+        <dd>Ponto de encontro combinado com a turma</dd>
+
+        <dt>Volta</dt>
+        <dd>20h, no mesmo lugar</dd>
+
+        <dt>Transporte</dt>
+        <dd>Ônibus fretado (vagas limitadas) ou por conta própria</dd>
+
+        <dt>Confirmação até</dt>
+        <dd><time datetime="2026-11-28">28 de novembro de 2026</time></dd>
+      </dl>
+    </section>
+
+    <section>
+      <h2>Programação do Dia</h2>
+      <table>
+        <caption>Cronograma das atividades do evento</caption>
+        <thead>
+          <tr>
+            <th scope="col">Horário</th>
+            <th scope="col">O que acontece</th>
+            <th scope="col">Onde</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">06h30</th>
+            <td>Embarque</td>
+            <td>Ponto de encontro combinado com a turma</td>
+          </tr>
+          <tr>
+            <th scope="row">09h00</th>
+            <td>Chegada e montagem</td>
+            <td>Quiosque 14</td>
+          </tr>
+          <tr>
+            <th scope="row">12h00</th>
+            <td>Almoço coletivo</td>
+            <td>Quiosque 14</td>
+          </tr>
+          <tr>
+            <th scope="row">15h00</th>
+            <td>Foto oficial da turma</td>
+            <td>Faixa de areia</td>
+          </tr>
+          <tr>
+            <th scope="row">17h00</th>
+            <td>Desmontagem</td>
+            <td>Quiosque 14</td>
+          </tr>
+          <tr>
+            <th scope="row">18h00</th>
+            <td>Embarque de volta</td>
+            <td>Estacionamento do quiosque</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>Como Chegar</h2>
+      <iframe 
+        title="Mapa da localização do Quiosque 14 em Praia Grande"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3644.823908810214!2d-46.41183212373059!3d-23.99912067850239!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce1db49db2529d%3A0xc6fb694a4b277d12!2sAv.%20Pres.%20Costa%20e%20Silva%20-%20Boqueir%C3%A3o%2C%20Praia%20Grande%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1700000000000" 
+        width="100%" 
+        height="300" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </section>
+
+    <section>
+      <h2>Confirme sua Presença</h2>
+      
+      <form action="confirmacao" method="post">
+
+        <div class="campo">
+          <label for="nome">Nome completo</label>
+          <input type="text" id="nome" name="nome" required minlength="3" autocomplete="name">
+        </div>
+
+        <div class="campo">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" required autocomplete="email">
+        </div>
+
+        <div class="campo">
+          <label for="whatsapp">WhatsApp</label>
+          <input type="tel" id="whatsapp" name="whatsapp" inputmode="tel" autocomplete="tel" placeholder="(11) 99999-9999" pattern="^(\(?\d{2}\)?\s?)?\d{4,5}-?\d{4}$" aria-describedby="dica-whatsapp">
+          <p id="dica-whatsapp">Digite seu telefone com DDD. Aceita formatos como (11) 99999-9999 ou 11999999999.</p>
+        </div>
+
+        <div class="campo">
+          <label for="nascimento">Data de nascimento</label>
+          <input type="date" id="nascimento" name="nascimento" autocomplete="bday">
+        </div>
+
+        <fieldset class="campo">
+          <legend>Você vai?</legend>
+          
+          <div class="opcao">
+            <input type="radio" id="vai-fretado" name="presenca" value="fretado" required>
+            <label for="vai-fretado">Com o fretado</label>
+          </div>
+
+          <div class="opcao">
+            <input type="radio" id="vai-proprio" name="presenca" value="proprio">
+            <label for="vai-proprio">Por conta própria</label>
+          </div>
+
+          <div class="opcao">
+            <input type="radio" id="nao-vai" name="presenca" value="nao">
+            <label for="nao-vai">Não vou conseguir ir</label>
+          </div>
+        </fieldset>
+
+        <div class="campo">
+          <label for="acompanhantes">Acompanhantes</label>
+          <input type="number" id="acompanhantes" name="acompanhantes" min="0" max="2" value="0">
+        </div>
+
+        <div class="campo">
+          <label for="camiseta">Tamanho da camiseta</label>
+          <select id="camiseta" name="camiseta">
+            <option value="">Selecione um tamanho...</option>
+            <option value="P">P</option>
+            <option value="M">M</option>
+            <option value="G">G</option>
+            <option value="GG">GG</option>
+            <option value="nao_quero">Não quero</option>
+          </select>
+        </div>
+
+        <fieldset class="campo">
+          <legend>O que você leva?</legend>
+          
+          <div class="opcao">
+            <input type="checkbox" id="leva-refrigerante" name="leva" value="refrigerante">
+            <label for="leva-refrigerante">Refrigerante/Suco</label>
+          </div>
+
+          <div class="opcao">
+            <input type="checkbox" id="leva-salgado" name="leva" value="salgado">
+            <label for="leva-salgado">Salgados / Lanches</label>
+          </div>
+
+          <div class="opcao">
+            <input type="checkbox" id="leva-doce" name="leva" value="doce">
+            <label for="leva-doce">Doces / Sobremesa</label>
+          </div>
+
+          <div class="opcao">
+            <input type="checkbox" id="leva-descartaveis" name="leva" value="descartaveis">
+            <label for="leva-descartaveis">Descartáveis (copos, pratos, guardanapos)</label>
+          </div>
+        </fieldset>
+
+        <div class="campo">
+          <label for="observacao">Restrição alimentar ou observação</label>
+          <textarea id="observacao" name="observacao" rows="4" maxlength="300"></textarea>
+        </div>
+
+        <div class="campo">
+          <label for="foto">Foto sua para o mural</label>
+          <input type="file" id="foto" name="foto" accept="image/*">
+        </div>
+
+        <div class="opcao campo">
+          <input type="checkbox" id="autorizo-imagem" name="autorizo_imagem" value="sim">
+          <label for="autorizo-imagem">Autorizo o uso da minha imagem para fotos do evento</label>
+        </div>
+
+        <div class="opcao campo">
+          <input type="checkbox" id="aceito-combinados" name="aceito_combinados" value="sim" required>
+          <label for="aceito-combinados">Li e aceito os combinados da turma</label>
+        </div>
+
+        <button type="submit">Confirmar Presença</button>
+
+      </form>
+    </section>
+
+  </main>
+
+  <footer>
+    <address>Comissão de formatura TI116 — ti116@exemplo.com</address>
+  </footer>
+
+</body>
+</html>
